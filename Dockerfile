@@ -4,7 +4,7 @@ maintainer zerosign <r1nlx0@gmail.com>
 ENV LANG C.UTF-8
 ENV SBT_VERSION 1.0.4
 
-ENV PATH="/opt/sbt/bin:${PATH}"
+ENV PATH="/opt/sbt/bin:$PATH"
 
 RUN set -x && apk add --no-cache openjdk8-jre
 
