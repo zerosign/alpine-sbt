@@ -6,7 +6,7 @@ ENV SBT_VERSION 1.0.4
 
 ENV PATH="/opt/sbt/bin:$PATH"
 
-RUN set -x && apk add --no-cache bash openjdk8-jre
+RUN set -x && apk add --no-cache bash openjdk8-jre git
 
 RUN mkdir -p /opt
 RUN wget -c https://github.com/sbt/sbt/releases/download/v1.0.4/sbt-1.0.4.zip -O sbt.zip 2> /dev/null
