@@ -12,9 +12,7 @@ ENV PATH "/opt/sbt/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1
 RUN set -x && apk add --no-cache docker bash openjdk8 git
 
 RUN mkdir -p /opt
-RUN wget -c https://github.com/sbt/sbt/releases/download/v1.0.4/sbt-1.0.4.zip -O sbt.zip 2> /dev/null
-RUN unzip sbt.zip 'sbt/*' -d /opt/
-RUN rm -rf sbt.zip
+RUN wget -c https://github.com/sbt/sbt/releases/download/v1.0.4/sbt-1.0.4.zip -O sbt.zip 2> /dev/null && unzip sbt.zip 'sbt/*' -d /opt/ && rm -rf sbt.zip
 
 RUN echo $JAVA_HOME
 
