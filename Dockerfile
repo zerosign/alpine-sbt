@@ -18,6 +18,4 @@ RUN echo $JAVA_HOME
 
 RUN docker --version
 
-
-
 RUN sbt sbtVersion
